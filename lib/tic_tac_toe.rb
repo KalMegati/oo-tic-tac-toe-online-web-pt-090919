@@ -71,7 +71,7 @@ class TicTacToe
   end
 
   def won?
-    WIN_COMBINATIONS.find { |combo| combo.map{|posit|@board[posit]}.join =~ /X{3}|O{3}/ } 
+    WIN_COMBINATIONS.find { |combo| combo.map{|posit|@board[posit]}.join =~ (/X{3}|O{3}/) } 
   end
   
   # def won?
@@ -83,7 +83,7 @@ class TicTacToe
   #   return ooo if ooo
   #   false
   # end
-  
+
   def full?
     true if turn_count == 9
   end
